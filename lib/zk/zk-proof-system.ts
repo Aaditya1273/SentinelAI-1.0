@@ -1,4 +1,8 @@
 import crypto from "crypto"
+import { groth16 } from 'snarkjs'
+import { buildBn128 } from 'ffjavascript'
+import { sha3_256 } from 'noble-hashes/sha3'
+import { ed25519 } from 'noble-curves/ed25519'
 import { zkQueries } from "../database"
 
 export interface ZKProofInput {
