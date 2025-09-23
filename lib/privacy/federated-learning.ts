@@ -1,3 +1,12 @@
+/**
+ * Federated Learning System for SentinelAI 4.0
+ * Privacy-preserving distributed AI training across DAO participants
+ * Implements differential privacy and secure aggregation
+ */
+
+import crypto from 'crypto'
+import { sha3_256 } from 'noble-hashes/sha3'
+
 export interface FederatedModel {
   modelId: string
   version: number
@@ -5,6 +14,8 @@ export interface FederatedModel {
   accuracy: number
   participantCount: number
   lastUpdated: number
+  privacyBudget: number
+  quantumResistant: boolean
 }
 
 export interface LearningUpdate {
