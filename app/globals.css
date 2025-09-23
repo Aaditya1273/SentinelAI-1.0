@@ -63,9 +63,11 @@ body {
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    border-color: rgb(var(--color-border));
+    outline-color: rgb(var(--color-ring) / 0.5);
   }
   body {
-    @apply bg-background text-foreground;
+    background-color: rgb(var(--color-background));
+    color: rgb(var(--color-foreground));
   }
 }
